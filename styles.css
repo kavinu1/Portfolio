@@ -44,7 +44,7 @@ nav a:hover {
 }
 
 body {
-  padding-top: 45px;
+  padding-top: 42px;
 }
 
 h1,
@@ -74,10 +74,13 @@ section {
 
 .section-width {
   max-width: 900px;
-  display: flex;
   margin: auto;
   justify-content: space-between;
   align-items: center;
+}
+
+.hero .section-width {
+  display: flex;
 }
 
 .block {
