@@ -8,13 +8,14 @@ body {
   font-family: "Segoe UI", sans-serif;
   background: #fdfdfe;
   color: #676f7e;
+  padding-top: 65px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 20px 30px;
   background: #fdfdfec5;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -27,24 +28,21 @@ header {
 }
 
 header h1 {
-  color: #0980ffe8;
-  font-size: 1rem;
+  color: #0371e7e8;
+  font-size: 1.2rem;
 }
 
 nav a {
   margin-left: 30px;
   text-decoration: none;
-  font-size: 0.65rem;
-  color: #333;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #676f7e;
   transition: color 0.3s;
 }
 
 nav a:hover {
   color: #0980ffe8;
-}
-
-body {
-  padding-top: 42px;
 }
 
 h1,
@@ -56,31 +54,40 @@ h4 {
 
 h2 {
   color: rgba(42, 43, 43, 0.918);
-  font-size: 2.5rem;
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #676f7e;
 }
 
 section {
-  padding: 1rem;
+  padding: 1.6rem;
   margin: auto;
   justify-content: space-between;
   align-items: center;
 }
 
 .section-width {
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
   justify-content: space-between;
   align-items: center;
 }
 
-.hero .section-width {
-  display: flex;
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  font-size: 2.5rem;
+}
+
+.section-heading .description {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .block {
@@ -96,8 +103,7 @@ section {
 }
 
 .block p {
-  font-size: 0.7rem;
-  line-height: 1.8;
+  font-size: 1rem;
 }
 
 .cards {
@@ -108,7 +114,7 @@ section {
 
 .card {
   text-align: center;
-  padding: 10px 26px;
+  width: 100%;
   border-radius: 8px;
   transition: box-shadow 0.3s;
 }
@@ -119,11 +125,18 @@ section {
 
 .card h3 {
   color: #0980ffe8;
-  font-size: 1.2em;
+  font-size: 1.6rem;
 }
 
 .card p {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+}
+
+.tagline {
+  color: #3e9bffe8;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 40px auto 10px;
 }
 
 .icon {
@@ -132,8 +145,8 @@ section {
 
 .icon img {
   background-color: #2680e7;
-  padding: 6px;
-  border-radius: 8px;
+  padding: 12px;
+  border-radius: 10px;
 }
 
 .icon h3,
@@ -143,8 +156,16 @@ section {
   gap: 8px;
 }
 
+.icon h3 {
+  font-size: 1.5rem;
+}
+
 .icon h4 {
   font-size: 1rem;
+}
+
+.hero .section-width {
+  display: flex;
 }
 
 .hero {
@@ -161,13 +182,19 @@ section {
 }
 
 .hero-text .tag {
-  font-size: 0.7rem;
+  font-size: 1rem;
+  font-weight: bold;
   color: #0980ffe8;
   background: #f5f9fe;
   padding: 6px 12px;
   border-radius: 20px;
   display: inline-block;
-  margin: 16px 0 5px;
+  margin: 16px 0 30px;
+}
+
+.hero-text h2 {
+  font-size: 4rem;
+  line-height: 1;
 }
 
 .hero-text h2 span {
@@ -175,11 +202,11 @@ section {
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  margin: 10px 0;
+  font-size: 1.4rem;
+  margin: 20px 0 10px;
   display: flex;
   align-items: center;
-  font-weight: 500;
+  font-weight: 600;
   gap: 8px;
 }
 
@@ -194,8 +221,8 @@ section {
 }
 
 .buttons button {
-  padding: 9px 20px;
-  font-size: 0.7rem;
+  padding: 12px 25px;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
@@ -224,10 +251,10 @@ section {
 
 .hero-image {
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  border: 0.2rem solid #2676d1c0;
+  border: 0.3rem solid #2278dbb0;
   box-shadow: 0 0 40px rgba(0, 123, 255, 0.5);
 }
 
@@ -257,8 +284,8 @@ section {
   position: absolute;
   width: auto;
   height: auto;
-  border-radius: 8px;
-  padding: 10px;
+  border-radius: 16px;
+  padding: 15px;
   animation: float-icons 5s ease-in-out infinite;
 }
 
@@ -282,32 +309,14 @@ section {
 }
 
 .star-icon {
-  top: 110px;
-  right: -40px;
+  top: 160px;
+  right: -50px;
 }
 
 .idea-icon img {
   background-color: #b3d3f8ce;
   bottom: -20px;
   left: -20px;
-}
-
-.about-heading {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.about-heading .tagline {
-  color: #0980ffe8;
-  margin: 40px auto 10px;
-}
-
-.about h2 {
-  font-size: 2.1rem;
-}
-
-.about-heading .description {
-  font-size: 0.9rem;
 }
 
 .about-container {
@@ -376,21 +385,6 @@ section {
   background: #fefefe;
 }
 
-.skills-heading {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.skills-heading .tagline {
-  color: #0980ffe8;
-  font-weight: 500;
-}
-
-.skills-heading h2 {
-  font-size: 2.5em;
-  margin: 10px 0;
-}
-
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -457,15 +451,6 @@ section {
 .portfolio {
   padding: 60px 80px;
   background: #fff;
-}
-
-.portfolio .skills-heading {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.portfolio .skills-heading h2 {
-  font-size: 2.5em;
 }
 
 .skills-grid {
