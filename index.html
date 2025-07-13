@@ -9,16 +9,16 @@
     <header>
       <h1>Portfolio</h1>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Skills</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero">
+    <section id="home" class="hero">
       <div class="section-width">
         <div class="hero-text">
           <div class="tag">
@@ -55,7 +55,7 @@
                 src="https://img.icons8.com/?size=14&id=21866&format=png&color=000000"
                 alt="Download-icon"
               />
-              &nbsp;&nbsp;Download CV
+              Download CV
             </button>
           </div>
           <div class="cards">
@@ -98,7 +98,7 @@
     </section>
 
     <!-- ABOUT ME SECTION -->
-    <section class="about">
+    <section id="about">
       <div class="section-width">
         <div class="section-heading">
           <p class="tagline">
@@ -115,8 +115,8 @@
           </p>
         </div>
 
-        <div class="about-container">
-          <div class="about-left">
+        <div class="column-container">
+          <div class="column-left">
             <div class="block">
               <div class="icon">
                 <h3>
@@ -173,7 +173,7 @@
             </div>
           </div>
 
-          <div class="about-right">
+          <div class="column-right">
             <div class="block">
               <div class="icon">
                 <h3>
@@ -287,7 +287,7 @@
     </section>
 
     <!-- SKILLS SECTION -->
-    <section class="skills">
+    <section id="skills">
       <div class="section-width">
         <div class="section-heading">
           <p class="tagline">
@@ -488,7 +488,7 @@
     </section>
 
     <!-- PORTFOLIO SECTION -->
-    <section class="portfolio">
+    <section id="portfolio">
       <div class="section-width">
         <div class="section-heading">
           <p class="tagline">
@@ -507,82 +507,362 @@
 
         <div class="cards">
           <div class="card-box">
-            <h3>🖥️ Task Manager</h3>
-            <p>Desktop app with task creation, tracking & management.</p>
-            <div class="skill-tags">
-              <span>Python</span><span>Tkinter</span><span>SQLite</span>
+            <div class="card-img">
+              <img
+                src="./assets/images/project-task-manager.jpg"
+                alt="project-task-manager"
+              />
+              <span class="label left">Completed</span>
+              <span class="label right">2025</span>
+            </div>
+            <div class="content">
+              <h3>Task Manager</h3>
+              <p>
+                A comprehensive task management application built as a
+                university project. Features task creation, organization,
+                completion tracking, and priority management with an intuitive
+                user interface.
+              </p>
+              <div class="skill-tags">
+                <span>CRUD Operations</span><span>Local Database</span
+                ><span> GUI Design</span>
+              </div>
+              <h5>Python&emsp;&emsp;Tkinter</h5>
+              <div class="buttons">
+                <button class="primary">
+                  <img
+                    src="https://img.icons8.com/?size=20&id=16139&format=png&color=ffffff"
+                    alt="open-link"
+                  />View Project
+                </button>
+                <button class="secondary">
+                  <img
+                    src="https://img.icons8.com/?size=20&id=16318&format=png&color=000000"
+                    alt="github-icon"
+                  />Source
+                </button>
+              </div>
             </div>
           </div>
-          <div class="card-box">
-            <h3>🌍 Climate Action Web</h3>
-            <p>Team project for climate awareness with responsive design.</p>
-            <div class="skill-tags">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span
-              ><span>Bootstrap</span>
-            </div>
-          </div>
-          <div class="card-box">
-            <h3>🧮 Basic Calculator</h3>
-            <p>JavaFX calculator app with GUI, OOP, and exception handling.</p>
-            <div class="skill-tags">
-              <span>Java</span><span>JavaFX</span><span>FXML</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="availability-box">
-          <h3>⚡ More Projects Coming Soon</h3>
-          <p>
-            I'm constantly working on new projects as I continue my studies.
-            Stay tuned!
-          </p>
-          <button class="primary">Follow My Journey</button>
+          <div class="card-box">
+            <div class="card-img">
+              <img
+                src="./assets/images/project-climate-web.jpg"
+                alt="project-climate-web"
+              />
+              <span class="label left">Group Project</span>
+              <span class="label right">2025</span>
+            </div>
+            <div class="content">
+              <h3>Climate Action Web</h3>
+              <p>
+                Collaborated on a group project creating an educational climate
+                action awareness website. Focused on environmental education,
+                sustainable practices, and community engagement.
+              </p>
+              <div class="skill-tags">
+                <span>Responsive Design </span><span>Team Collaboration</span
+                ><span>Environmental Impact</span>
+              </div>
+              <h5>HTML5&emsp;&emsp;CSS3&emsp;&emsp;JavaScript</h5>
+              <div class="buttons">
+                <button class="primary">
+                  <img
+                    src="https://img.icons8.com/?size=20&id=16139&format=png&color=ffffff"
+                    alt="open-link"
+                  />View Project
+                </button>
+                <button class="secondary">
+                  <img
+                    src="https://img.icons8.com/?size=20&id=16318&format=png&color=000000"
+                    alt="github-icon"
+                  />Source
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-box">
+            <div class="card-img">
+              <img
+                src="./assets/images/project-calculator.jpg"
+                alt="project-calculator"
+              />
+              <span class="label left">Completed</span>
+              <span class="label right">2025</span>
+            </div>
+            <div class="content">
+              <h3>Basic Calculator</h3>
+              <p>
+                Developed a feature-rich calculator application as part of
+                coursework. Implements standard arithmetic operations with an
+                elegant JavaFX interface and error handling.
+              </p>
+              <div class="skill-tags">
+                <span>Object-Oriented Design</span><span>Event Handling</span
+                ><span>UI/UX</span>
+              </div>
+              <h5>Java&emsp;&emsp;JavaFX&emsp;&emsp;FXML</h5>
+              <div class="buttons">
+                <button class="primary">
+                  <img
+                    src="https://img.icons8.com/?size=20&id=16139&format=png&color=ffffff"
+                    alt="open-link"
+                  />View Project
+                </button>
+                <button class="secondary">
+                  <img
+                    src="https://img.icons8.com/?size=20&id=16318&format=png&color=000000"
+                    alt="github-icon"
+                  />Source
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="availability-box">
+            <div class="icon">
+              <img
+                src="https://img.icons8.com/?size=40&id=16412&format=png&color=ffffff"
+                alt=""
+              />
+            </div>
+            <h2>More Projects Coming Soon</h2>
+            <br />
+            <p>
+              As I continue my Computer Science studies at the University of
+              Westminster, I'm constantly working on new projects and expanding
+              my technical skills. Stay tuned for more exciting developments!
+            </p>
+            <div class="buttons">
+              <button class="primary">
+                <img
+                  src="https://img.icons8.com/?size=20&id=16412&format=png&color=ffffff"
+                  alt="open-link"
+                />Follow My Journey
+              </button>
+              <button class="secondary">
+                <img
+                  src="https://img.icons8.com/?size=20&id=16318&format=png&color=000000"
+                  alt="github-icon"
+                />View All Codes
+              </button>
+            </div>
+
+            <div class="cards">
+              <div class="card">
+                <h3>7+</h3>
+                <p>Projects Completed</p>
+              </div>
+              <div class="card">
+                <h3>5+</h3>
+                <p>Technologies Used</p>
+              </div>
+              <div class="card">
+                <h3>1000+</h3>
+                <p>Lines of Code</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT SECTION -->
-    <section class="contact">
-      <div class="section-heading">
-        <p class="tagline">📫 Let's connect</p>
-        <h2>Get In Touch</h2>
-        <p class="description">
-          I'm always open to discussing new opportunities, collaborations, or
-          just connecting with fellow tech enthusiasts
-        </p>
-      </div>
-
-      <div class="contact-grid">
-        <form class="contact-form">
-          <h3>💬 Send Me a Message</h3>
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Your Email" />
-          <input type="text" placeholder="Subject" />
-          <textarea
-            placeholder="Tell me more about your idea, project, or just say hello..."
-          ></textarea>
-          <button type="submit">✈ Send Message</button>
-        </form>
-        <div class="contact-info">
-          <h3>📘 Contact Information</h3>
-          <p><strong>Email:</strong> Kavinu.Thepul@example.com</p>
-          <p><strong>LinkedIn:</strong> /in/KavinuThepul</p>
-          <p><strong>GitHub:</strong> /KavinuThepul</p>
-          <p><strong>Phone:</strong> +44 123 456 7890</p>
-          <br />
-          <h4>📍 Quick Info</h4>
-          <p><strong>Location:</strong> London, UK</p>
-          <p><strong>Response Time:</strong> Within 24 hours</p>
-          <p><strong>Preferred Contact:</strong> Email or LinkedIn</p>
+    <section id="contact">
+      <div class="section-width">
+        <div class="section-heading">
+          <p class="tagline">
+            <img
+              src="https://img.icons8.com/?size=18&id=87493&format=png&color=0980ffe8"
+              alt="nav-icon"
+            />&nbsp;&nbsp;Let's connect
+          </p>
+          <h2>Get In Touch</h2>
+          <p class="description">
+            I'm always open to discussing new opportunities, collaborations, or
+            just connecting with fellow tech enthusiasts
+          </p>
         </div>
-      </div>
 
-      <div class="availability-box">
-        <h3>✅ Available for Work</h3>
-        <p>
-          Open to internships, part-time opportunities, and exciting projects
-        </p>
-        <p style="color: green">● Currently accepting offers</p>
+        <div class="column-container">
+          <div class="column-left">
+            <div class="block">
+              <div class="icon">
+                <h3>
+                  <img
+                    src="https://img.icons8.com/?size=24&id=rtz2obYzAaeZ&format=png&color=ffffff"
+                    alt="Message-icon"
+                  />
+                  Send Me a Message
+                </h3>
+              </div>
+
+              <form action="#" method="post">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName"
+                      >First Name <span class="asterisk">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      placeholder="Enter your first name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName"
+                      >Last Name <span class="asterisk">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      placeholder="Enter your last name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email"
+                    >Email <span class="asterisk">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="tel"
+                    >Subject <span class="asterisk">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    id="tel"
+                    name="tel"
+                    placeholder="What would you like to discuss?"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="message"
+                    >Message / Inquiry <span class="asterisk">*</span></label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Write your message here..."
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="buttons">
+                  <button type="submit" class="primary">
+                    <img
+                      src="https://img.icons8.com/?size=20&id=87493&format=png&color=ffffff"
+                      alt="nav-icon"
+                    />
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="column-right">
+            <div class="block">
+              <div class="icon">
+                <h3>
+                  <img
+                    src="https://img.icons8.com/?size=24&id=85467&format=png&color=ffffff"
+                    alt="mail-icon"
+                  />
+                  Contact Information
+                </h3>
+              </div>
+
+              <div class="red-card">
+                <div class="icon">
+                  <img
+                    src="https://img.icons8.com/?size=24&id=85467&format=png&color=ffffff"
+                    alt="mail-icon"
+                  />
+                  <p><strong>Email:</strong> Kavinu.Thepul@example.com</p>
+                </div>
+              </div>
+              <div class="blue-card">
+                <div class="icon">
+                  <img
+                    src="https://img.icons8.com/?size=24&id=34349&format=png&color=ffffff"
+                    alt="LinkedIn-icon"
+                  />
+                  <p><strong>LinkedIn:</strong> /in/KavinuThepul</p>
+                </div>
+              </div>
+              <div class="black-card">
+                <div class="icon">
+                  <img
+                    src="https://img.icons8.com/?size=24&id=WCL5hPLvhUjQ&format=png&color=ffffff"
+                    alt="github-icon"
+                  />
+                  <p><strong>GitHub:</strong> /KavinuThepul</p>
+                </div>
+              </div>
+              <div class="green-card">
+                <div class="icon">
+                  <img
+                    src="https://img.icons8.com/?size=24&id=fRUk0nXEUwqZ&format=png&color=ffffff"
+                    alt="phone-icon"
+                  />
+                  <p><strong>Phone:</strong>+94</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="block">
+              <h3>Quick Info</h3>
+              <br />
+              <div class="icon">
+                <img
+                  src="https://img.icons8.com/?size=20&id=85049&format=png&color=ffffff"
+                  alt="map-icon"
+                />
+                <p><strong>Location:</strong> Padukka, SL</p>
+              </div>
+              <div class="icon">
+                <img
+                  src="https://img.icons8.com/?size=20&id=82767&format=png&color=ffffff"
+                  alt="clock"
+                />
+                <p><strong>Response Time:</strong> Within 24 hours</p>
+              </div>
+              <div class="icon">
+                <img
+                  src="https://img.icons8.com/?size=24&id=rtz2obYzAaeZ&format=png&color=ffffff"
+                  alt="Message-icon"
+                />
+                <p><strong>Preferred Contact:</strong> Email or LinkedIn</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="availability-box">
+          <h3>✅ Available for Work</h3>
+          <p>
+            Open to internships, part-time opportunities, and exciting projects
+          </p>
+          <p style="color: rgb(9, 153, 9)">● Currently accepting offers</p>
+        </div>
       </div>
     </section>
 
@@ -590,25 +870,38 @@
     <footer>
       <div class="footer-content">
         <div class="footer-block">
-          <h3>Kavinu Thepul</h3>
+          <h2>Kavinu Thepul</h2>
           <p>
             Computer Science undergraduate passionate about creating innovative
             solutions and building meaningful digital experiences.
           </p>
         </div>
         <div class="footer-block">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-block">
-          <h4>Connect With Me</h4>
-          <p>📧 ✉️ 💼 🧑‍💻</p>
+          <h3>Connect With Me</h3>
+          <p>
+            <img
+              src="https://img.icons8.com/?size=35&id=YRRhCXfA0Vd0&format=png&color=797171"
+              alt="mail-icon"
+            />&emsp;
+            <img
+              src="https://img.icons8.com/?size=35&id=8808&format=png&color=797171"
+              alt=""
+            />&emsp;
+            <img
+              src="https://img.icons8.com/?size=32&id=RHLuYrY4GjUv&format=png&color=797171"
+              alt="github-icon"
+            />
+          </p>
           <p>
             Feel free to reach out for collaborations, opportunities, or just to
             connect!
@@ -616,9 +909,10 @@
         </div>
       </div>
       <hr />
-      <p class="footer-note">
-        © 2025 Kavinu Thepul. Made with ❤️ and lots of coffee
-      </p>
+      <br />
+      <div class="footer-notes">
+        <p>Copyright © 2025 Kavinu Thepul. All rights reserved.</p>
+      </div>
     </footer>
   </body>
 </html>
