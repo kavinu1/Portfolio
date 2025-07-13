@@ -108,14 +108,13 @@ section {
 
 .cards {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
   margin-top: 30px;
   justify-content: center;
 }
 
 .card {
-  min-width: 250px;
+  width: 100%;
   padding: 20px;
   border-radius: 8px;
   transition: box-shadow 0.3s ease;
@@ -170,9 +169,8 @@ section {
 .card-box {
   background: #edf5ff56;
   border-radius: 12px;
-  max-width: 300px;
   text-align: center;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
 }
 
 .card-box p {
@@ -180,8 +178,7 @@ section {
 }
 
 .card-box .icon img {
-  padding: 7px;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 
 .card-box:hover {
@@ -192,13 +189,21 @@ section {
   transform: scale(1.1);
 }
 
+.blue-card,
 .purple-card,
 .green-card,
-.orange-card {
-  padding: 25px;
+.orange-card,
+.red-card,
+.dark-green-card {
+  padding: 30px 40px;
   border-radius: 12px;
   width: 100%;
+  height: 100%;
   transition: background-color 0.5s ease;
+}
+
+.blue-card:hover {
+  background-color: #d1e7ff75;
 }
 
 .purple-card:hover {
@@ -213,20 +218,45 @@ section {
   background-color: #fdefe694;
 }
 
+.red-card:hover {
+  background-color: #ffe3e394;
+}
+
+.dark-green-card:hover {
+  background-color: #d6f1e473;
+}
+
+.blue-card .icon img {
+  background: linear-gradient(135deg, #6885face, #013cffc0);
+}
+
 .purple-card .icon img {
   background: linear-gradient(135deg, #4a6cf7, #9b34ef);
 }
+
 .green-card .icon img {
   background: linear-gradient(135deg, #28c76f, #009688);
 }
+
 .orange-card .icon img {
-  background: linear-gradient(135deg, #f7867c, #eb4747);
+  background: linear-gradient(135deg, #f7be7c, #ee6c02);
 }
 
+.red-card .icon img {
+  background: linear-gradient(135deg, #f87171b7, #f01313c9);
+}
+
+.dark-green-card .icon img {
+  background: linear-gradient(135deg, #5dbd75b9, #076933d8);
+}
+
+.blue-card .icon img,
 .purple-card .icon img,
 .green-card .icon img,
-.orange-card .icon img {
-  transition: transform 0.3s ease;
+.orange-card .icon img,
+.red-card .icon img,
+.dark-green-card .icon img {
+  transition: transform 0.5s ease;
 }
 
 .hero .section-width {
@@ -425,18 +455,58 @@ section {
   text-decoration: none;
 }
 
+.skills .cards {
+  flex-wrap: wrap;
+}
+
+.skills .card-box {
+  max-width: 410px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.skill-tags span {
+  padding: 4px 15px;
+  width: fit-content;
+  border: 1px solid #9ac4eb;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
 .progress-section {
-  margin-top: 50px;
+  margin-top: 80px;
+  padding: 40px 15px;
+  text-align: center;
+  border-radius: 16px;
+  transition: box-shadow 0.5s ease;
+}
+
+.progress-section:hover {
+  box-shadow: 0 0 20px rgba(13, 130, 255, 0.5);
+}
+
+.progress-section .card-box {
+  margin-top: 10px;
+  pointer-events: none;
+  width: 100%;
 }
 
 .progress-bar {
-  margin: 20px 0;
+  margin: 30px;
 }
 
 .progress-bar label {
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 6px;
+  margin-bottom: 16px;
 }
 
 .bar {
@@ -451,35 +521,13 @@ section {
   background: #0980ffe8;
 }
 
-/* Portfolio Section */
+.progress-section .card {
+  width: 200px;
+  font-weight: 500;
+}
+
 .portfolio {
-  padding: 60px 80px;
   background: #fff;
-}
-
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.skill-box {
-  background: #f8fbff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  width: 300px;
-}
-
-.skill-box img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.skill-tags {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
 }
 
 .availability-box {
