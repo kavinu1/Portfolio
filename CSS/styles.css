@@ -312,7 +312,8 @@ section {
   color: white;
 }
 
-.buttons .primary:hover {
+.buttons .primary:hover,
+#portfolio .card-box:hover {
   transform: scale(1.05);
 }
 
@@ -497,6 +498,7 @@ section {
 
 #skills .card-box,
 #portfolio .card-box {
+  transition: all 0.5s;
   max-width: 380px;
 }
 
