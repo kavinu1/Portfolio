@@ -5,11 +5,17 @@ menuToggle.addEventListener("click", () => {
   navbar.classList.toggle("show");
 });
 
-// Smooth scrolling for nav links
-document.querySelectorAll('nav a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", (e) => {
+// Smooth scrolling for links and buttons
+document.querySelectorAll('a[href^="#"]').forEach((el) => {
+  el.addEventListener("click", (e) => {
     e.preventDefault();
-    const target = document.querySelector(link.getAttribute("href"));
+
+    const targetSelector =
+      el.tagName.toLowerCase() === "a"
+        ? el.getAttribute("href")
+        : el.getAttribute("data-target");
+
+    const target = document.querySelector(targetSelector);
     if (target) {
       target.scrollIntoView({
         behavior: "smooth",

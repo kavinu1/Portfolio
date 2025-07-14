@@ -293,7 +293,7 @@ section {
   gap: 16px;
 }
 
-.buttons button {
+.buttons a {
   padding: 12px 25px;
   font-size: 1rem;
   font-weight: bold;
@@ -304,6 +304,7 @@ section {
   display: flex;
   align-items: center;
   gap: 16px;
+  text-decoration: none;
 }
 
 .buttons .primary {
@@ -450,6 +451,10 @@ section {
   background-color: #b3d3f8ce;
   bottom: -20px;
   left: -20px;
+}
+
+#about .block p {
+  text-align: justify;
 }
 
 .column-container {
@@ -615,7 +620,7 @@ section {
   font-size: 0.7rem;
 }
 
-.content button {
+.content .buttons a {
   width: 160px;
   padding: 7px 15px;
   font-size: 0.9rem;
@@ -638,7 +643,7 @@ section {
   pointer-events: none;
 }
 
-.availability-box button {
+.availability-box .buttons a {
   margin: auto;
 }
 
@@ -687,7 +692,7 @@ section {
   box-shadow: 0 0 20px rgba(13, 130, 255, 0.5);
 }
 
-#contact button {
+#contact .buttons a {
   font-size: 0.9rem;
   padding: 8px;
   justify-content: center;
@@ -700,9 +705,11 @@ section {
   gap: 10px;
 }
 
-#contact .block .icon p {
+#contact .block .icon a {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: #363d49;
 }
 
 #contact .blue-card,
@@ -807,10 +814,12 @@ footer p {
 }
 
 @media (max-width: 550px) {
-  #contact .blue-card p,
-  #contact .green-card p,
-  #contact .red-card p,
-  #contact .black-card p {
+  .hero-image {
+    width: 270px;
+    height: 270px;
+  }
+
+  #contact .block .icon a {
     font-size: 0.8rem;
   }
 
