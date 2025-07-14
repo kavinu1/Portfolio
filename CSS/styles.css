@@ -27,6 +27,15 @@ header {
   width: 100%;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #676f7e;
+}
+
 header h1 {
   color: #0371e7e8;
   font-size: 1.2rem;
@@ -67,6 +76,10 @@ section {
   margin: auto;
   justify-content: space-between;
   align-items: center;
+}
+
+section {
+  scroll-margin-top: 2rem;
 }
 
 .section-width {
@@ -482,6 +495,11 @@ section {
   max-width: 380px;
 }
 
+#skills .progress-section .card-box {
+  max-width: none;
+  width: clamp(300px, 49%, 500px);
+}
+
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
@@ -551,7 +569,7 @@ section {
 }
 
 #portfolio .card-img {
-  height: 150px;
+  height: 180px;
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -701,9 +719,9 @@ footer {
 
 .footer-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap;
   color: white;
   margin-bottom: 15px;
 }
@@ -748,4 +766,89 @@ footer p {
 
 .footer-notes {
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero .section-width {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero .subtitle {
+    justify-content: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin-top: 60px;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+  }
+
+  .column-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column-left,
+  .column-right {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  #contact .blue-card p,
+  #contact .green-card p,
+  #contact .red-card p,
+  #contact .black-card p {
+    font-size: 0.8rem;
+  }
+
+  #contact h3 {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 78px;
+    left: 0;
+    background: #fdfdfec5;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    padding-right: 2rem;
+  }
+
+  nav a {
+    padding: 10px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  section {
+    scroll-margin-top: 3rem;
+  }
 }
