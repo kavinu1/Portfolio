@@ -10,7 +10,8 @@
 }
 
 .row img {
-  max-width: 600px;
+  width: clamp(150px, 100%, 600px);
+  height: auto;
 }
 
 #certificates .buttons {
@@ -20,9 +21,5 @@
 @media (max-width: 600px) {
   .row {
     flex-wrap: wrap;
-  }
-
-  .row img {
-    width: 100%;
   }
 }
