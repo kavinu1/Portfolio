@@ -1,3 +1,4 @@
+// MENU TOGGLE
 const menuToggle = document.getElementById("menu-toggle");
 const navbar = document.getElementById("navbar");
 
@@ -5,7 +6,7 @@ menuToggle.addEventListener("click", () => {
   navbar.classList.toggle("show");
 });
 
-// Smooth scrolling for links and buttons
+// SMOOTH SCROLLING for links and buttons
 document.querySelectorAll('a[href^="#"]').forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
@@ -24,3 +25,16 @@ document.querySelectorAll('a[href^="#"]').forEach((el) => {
     }
   });
 });
+
+window.addEventListener("scroll", function () {
+  const scrollBtn = document.querySelector(".scroll-to-top");
+  if (window.scrollY > 100) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+});
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}

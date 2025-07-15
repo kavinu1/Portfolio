@@ -1,0 +1,417 @@
+.hero .section-width {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero {
+  background: linear-gradient(
+    135deg,
+    hsl(210, 62%, 95%) 0%,
+    hsl(220 8% 98%) 50%,
+    hsl(211 85% 96%) 100%
+  );
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text .tag {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0980ffe8;
+  background: #f5f9fe;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 16px 0 30px;
+}
+
+.hero-text h2 {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.hero-text h2 span {
+  color: #0980ffe8;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  margin: 20px 0 10px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  gap: 8px;
+}
+
+.hero .card {
+  background-color: #f9fbffee;
+  padding: 10px;
+  min-width: 150px;
+}
+
+.hero .card {
+  text-align: center;
+}
+
+.hero-image {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 0.3rem solid #2278dbb0;
+  box-shadow: 0 0 40px rgba(0, 123, 255, 0.5);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.angle-bracket img,
+.star-icon,
+.idea-icon img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  border-radius: 16px;
+  padding: 15px;
+  animation: float-icons 5s ease-in-out infinite;
+}
+
+@keyframes float-icons {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.angle-bracket img {
+  background: #0980ffe8;
+  color: white;
+  top: -20px;
+  right: -20px;
+}
+
+.star-icon {
+  top: 160px;
+  right: -50px;
+}
+
+.idea-icon img {
+  background-color: #b3d3f8ce;
+  bottom: -20px;
+  left: -20px;
+}
+
+#about .block p {
+  text-align: justify;
+}
+
+.edu-box {
+  border: 1px solid #cce5ff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.edu-box p {
+  font-weight: bold;
+  font-size: 0.92rem;
+  line-height: 2;
+}
+
+.edu-box a {
+  color: #0980ffe8;
+  text-decoration: none;
+}
+
+#skills .cards,
+#portfolio .cards {
+  flex-wrap: wrap;
+}
+
+#skills .card-box,
+#portfolio .card-box {
+  transition: all 0.5s;
+  max-width: 380px;
+}
+
+#skills .progress-section .card-box {
+  max-width: none;
+  width: clamp(300px, 49%, 500px);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.skill-tags span {
+  padding: 4px 15px;
+  width: fit-content;
+  border: 1px solid #9ac4eb;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+#skills .buttons {
+  justify-content: center;
+}
+
+.progress-section {
+  margin-top: 80px;
+  padding: 40px 15px;
+  text-align: center;
+  border-radius: 16px;
+  transition: box-shadow 0.5s ease;
+}
+
+.progress-section:hover {
+  box-shadow: 0 0 20px rgba(13, 130, 255, 0.5);
+}
+
+.progress-section .card-box {
+  margin-top: 10px;
+  pointer-events: none;
+  width: 100%;
+}
+
+.progress-bar {
+  margin: 30px;
+}
+
+.progress-bar label {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.bar {
+  background: #eee;
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  background: #0980ffe8;
+}
+
+.progress-section .card,
+.availability-box .card {
+  width: 250px;
+  font-weight: 500;
+}
+
+#portfolio {
+  background: #fff;
+}
+
+#portfolio .card-img {
+  height: 180px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+#portfolio .card-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
+}
+
+#portfolio .label {
+  position: absolute;
+  top: 10px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #fff;
+}
+
+#portfolio .label.left {
+  left: 10px;
+  background-color: #0d6efd;
+}
+
+#portfolio .label.right {
+  right: 10px;
+  background-color: #6c757d;
+}
+
+.content {
+  padding: 20px;
+  text-align: justify;
+}
+
+.content h5 {
+  margin-top: 15px;
+  color: #2680e7;
+}
+
+.content span {
+  font-size: 0.7rem;
+}
+
+.content .buttons a {
+  width: 160px;
+  padding: 7px 15px;
+  font-size: 0.9rem;
+}
+
+.availability-box {
+  margin-top: 40px;
+  padding: 3rem 2rem 1.5rem;
+  text-align: center;
+  width: 100%;
+  background-color: #edf5ff56;
+  transition: box-shadow 0.5s ease;
+}
+
+.availability-box:hover {
+  box-shadow: 0 0 20px rgba(13, 130, 255, 0.5);
+}
+
+.availability-box .card {
+  pointer-events: none;
+}
+
+.availability-box .buttons a {
+  margin: auto;
+}
+
+#contact .block {
+  padding: 2rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.asterisk {
+  color: #b92922;
+}
+
+.form-group label {
+  color: #1f2937;
+  font-weight: 500;
+  display: block;
+  margin: 20px 0 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: #ffffffa6;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#contact .block textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 1px solid #0d6dfda1;
+  box-shadow: 0 0 20px rgba(13, 130, 255, 0.5);
+}
+
+#contact .buttons a {
+  font-size: 0.9rem;
+  padding: 8px;
+  justify-content: center;
+  width: 100%;
+}
+
+#contact .block .icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#contact .block .icon a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #363d49;
+}
+
+#contact .blue-card,
+#contact .green-card,
+#contact .red-card,
+#contact .black-card {
+  padding: 16px 15px 1px;
+}
+
+@media (max-width: 768px) {
+  .hero .section-width {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero .subtitle {
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero-image {
+    width: 270px;
+    height: 270px;
+  }
+
+  #contact .block .icon a {
+    font-size: 0.8rem;
+  }
+
+  #contact h3 {
+    font-size: 1.2rem;
+  }
+}
