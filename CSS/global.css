@@ -452,6 +452,8 @@ footer p {
     width: 100%;
     text-align: center;
     padding-right: 2rem;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
   }
 
   nav a {
