@@ -303,6 +303,7 @@ section {
   gap: 16px;
 }
 
+.buttons button,
 .buttons a {
   padding: 12px 25px;
   font-size: 1rem;

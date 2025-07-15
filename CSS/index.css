@@ -297,7 +297,7 @@
   transition: box-shadow 0.5s ease;
 }
 
-.availability-box:hover {
+#portfolio .availability-box:hover {
   box-shadow: 0 0 20px rgba(13, 130, 255, 0.5);
 }
 
@@ -354,7 +354,7 @@
   box-shadow: 0 0 20px rgba(13, 130, 255, 0.5);
 }
 
-#contact .buttons a {
+#contact .buttons button {
   font-size: 0.9rem;
   padding: 8px;
   justify-content: center;
