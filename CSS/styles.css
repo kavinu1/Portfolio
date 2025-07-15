@@ -29,9 +29,8 @@ header {
 
 .menu-toggle {
   display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
   cursor: pointer;
   color: #676f7e;
 }
@@ -837,7 +836,7 @@ footer p {
     display: none;
     flex-direction: column;
     position: fixed;
-    top: 78px;
+    top: 66px;
     left: 0;
     background: #fdfdfec5;
     backdrop-filter: blur(10px);
