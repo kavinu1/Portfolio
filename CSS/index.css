@@ -381,6 +381,10 @@
   padding: 16px 15px 1px;
 }
 
+.green {
+  color: rgb(9, 153, 9);
+}
+
 @media (max-width: 768px) {
   .hero .section-width {
     flex-direction: column;
