@@ -1,0 +1,121 @@
+.education {
+    overflow: hidden;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--gradient-border);
+    opacity: 0.3;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 3rem;
+    opacity: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 11px;
+    top: 25px;
+    width: 20px;
+    height: 20px;
+    background: var(--bg-primary);
+    border: 3px solid var(--accent-cyan);
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 15px var(--accent-cyan);
+}
+
+.timeline-content {
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 25px;
+    width: 10px;
+    height: 2px;
+    background: var(--accent-cyan);
+    opacity: 0.3;
+}
+
+.degree-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.degree-header h3 {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.institution {
+    font-size: 1.1rem;
+    color: var(--accent-cyan);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.edu-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.expectation {
+    color: var(--accent-blue);
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+    background: rgba(79, 172, 254, 0.1);
+    border-radius: var(--radius-sm);
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-dot {
+        left: 6px;
+    }
+
+    .timeline-item {
+        padding-left: 45px;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+
+    .edu-meta {
+        gap: 0.75rem;
+    }
+}
