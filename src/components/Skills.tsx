@@ -60,7 +60,7 @@ const Skills: React.FC = () => {
 
                 <div className="skills-grid">
                     {skillCategories.map((category, index) => (
-                        <div className="skill-category glass animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }} key={index}>
+                        <div className="skill-category glass-card animate-fade-up" style={{ animationDelay: `${index * 0.1}s` }} key={index}>
                             <div className="category-header">
                                 <div className="category-icon text-gradient">
                                     {category.icon}
@@ -80,7 +80,7 @@ const Skills: React.FC = () => {
                 </div>
 
                 <div className="skills-extra-grid">
-                    <div className="extra-section glass animate-slide-up" style={{ animationDelay: '0.6s' }}>
+                    <div className="extra-section glass-card animate-fade-up" style={{ animationDelay: '0.6s' }}>
                         <div className="category-header">
                             <div className="category-icon text-gradient"><Lightbulb size={22} /></div>
                             <h3>Currently Learning</h3>
@@ -95,7 +95,7 @@ const Skills: React.FC = () => {
                         </ul>
                     </div>
 
-                    <div className="extra-section glass animate-slide-up" style={{ animationDelay: '0.7s' }}>
+                    <div className="extra-section glass-card animate-fade-up" style={{ animationDelay: '0.7s' }}>
                         <div className="category-header">
                             <div className="category-icon text-gradient"><Server size={22} /></div>
                             <h3>Core Competencies</h3>

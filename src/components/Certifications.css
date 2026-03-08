@@ -2,50 +2,55 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
-    padding: 1rem 0;
 }
 
 .cert-card {
-    padding: 2rem;
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    border-radius: var(--radius-md);
-    opacity: 0;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
 }
 
 .cert-icon {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 242, 254, 0.1);
-    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
     color: var(--accent-cyan);
+    flex-shrink: 0;
 }
 
 .cert-info h3 {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
 }
 
 .provider {
-    color: var(--accent-cyan);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
     font-weight: 500;
-    margin-bottom: 0.25rem;
 }
 
 .date {
-    color: var(--text-secondary);
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
 }
 
-@media (max-width: 768px) {
-    .cert-grid {
-        grid-template-columns: 1fr;
+.cert-card:hover .cert-icon {
+    transform: scale(1.1);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+@media (max-width: 480px) {
+    .cert-card {
+        padding: 1.25rem;
     }
 }

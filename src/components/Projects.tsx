@@ -36,7 +36,7 @@ const Projects: React.FC = () => {
 
                 <div className="projects-grid">
                     {projectsData.map((project, index) => (
-                        <div className="project-card glass animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }} key={index}>
+                        <div className="project-card glass-card animate-fade-up" style={{ animationDelay: `${index * 0.1}s` }} key={index}>
                             <div className="project-content">
                                 <h3 className="project-title">{project.title}</h3>
                                 <p className="project-desc">{project.description}</p>

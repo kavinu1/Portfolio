@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
                 </h2>
 
                 <div className="contact-wrapper">
-                    <div className="contact-info glass">
+                    <div className="contact-info glass-card animate-fade-up">
                         <h3>Let's build something scalable.</h3>
                         <p>
                             I'm open to DevOps internship opportunities, collaboration, and learning-focused projects. Send me a message and I'll get back to you as soon as I can.
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
                         </div>
                     </div>
 
-                    <form className="contact-form glass" onSubmit={handleSubmit}>
+                    <form className="contact-form glass-card animate-fade-up" style={{ animationDelay: '0.2s' }} onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="name">System Admin Name</label>
                             <input type="text" id="name" name="name" placeholder="John Doe" required />

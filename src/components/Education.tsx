@@ -34,9 +34,9 @@ const Education: React.FC = () => {
 
                 <div className="timeline">
                     {educationData.map((item, index) => (
-                        <div className="timeline-item animate-slide-up" style={{ animationDelay: `${index * 0.2}s` }} key={index}>
+                        <div className="timeline-item animate-fade-up" style={{ animationDelay: `${index * 0.2}s` }} key={index}>
                             <div className="timeline-dot"></div>
-                            <div className="timeline-content glass">
+                            <div className="timeline-content glass-card">
                                 <div className="degree-header">
                                     <GraduationCap size={20} className="text-gradient" />
                                     <h3>{item.degree}</h3>

@@ -11,7 +11,7 @@ const About: React.FC = () => {
                 </h2>
 
                 <div className="about-content">
-                    <div className="about-text glass">
+                    <div className="about-text glass-card animate-fade-up">
                         <p className="highlight">
                             I'm a <span className="text-gradient">Computer Science undergraduate</span> currently in Year 2, dedicated to mastering DevOps, cloud infrastructure, and system reliability.
                         </p>

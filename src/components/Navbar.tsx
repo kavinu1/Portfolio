@@ -5,30 +5,62 @@ import './Navbar.css';
 const Navbar: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('home');
     const resumeHref = `${import.meta.env.BASE_URL}Kavinu_Vanniarachchi_CV.pdf`;
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
+            setIsScrolled(window.scrollY > 20);
         };
+
+        // Active section logic using Intersection Observer
+        const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) observer.observe(el);
+        });
+
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            observer.disconnect();
+        };
     }, []);
 
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [isMobileMenuOpen]);
+
     const navLinks = [
-        { name: 'About', href: '#about' },
-        { name: 'Education', href: '#education' },
-        { name: 'Skills', href: '#skills' },
-        { name: 'Certifications', href: '#certifications' },
-        { name: 'Projects', href: '#projects' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'About', href: '#about', id: 'about' },
+        { name: 'Skills', href: '#skills', id: 'skills' },
+        { name: 'Projects', href: '#projects', id: 'projects' },
+        { name: 'Contact', href: '#contact', id: 'contact' },
     ];
 
     return (
-        <header className={`navbar ${isScrolled ? 'scrolled glass' : ''}`}>
+        <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="container navbar-content">
-                <a href="#" className="logo">
-                    <Terminal className="logo-icon" size={28} />
+                <a href="#home" className="logo" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Terminal className="logo-icon" size={26} />
                     <span className="logo-text">
                         Kavinu<span className="text-gradient">V</span>
                     </span>
@@ -39,7 +71,10 @@ const Navbar: React.FC = () => {
                     <ul className="nav-list">
                         {navLinks.map((link) => (
                             <li key={link.name}>
-                                <a href={link.href} className="nav-link">
+                                <a
+                                    href={link.href}
+                                    className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
+                                >
                                     {link.name}
                                 </a>
                             </li>
@@ -59,19 +94,24 @@ const Navbar: React.FC = () => {
                 <button
                     className="mobile-menu-btn"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-label="Toggle menu"
                 >
                     {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
             </div>
 
             {/* Mobile Nav Menu */}
+            <div
+                className={`mobile-overlay ${isMobileMenuOpen ? 'open' : ''}`}
+                onClick={() => setIsMobileMenuOpen(false)}
+            />
             <div className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
                 <ul className="mobile-nav-list">
                     {navLinks.map((link) => (
                         <li key={link.name}>
                             <a
                                 href={link.href}
-                                className="mobile-nav-link"
+                                className={`mobile-nav-link ${activeSection === link.id ? 'active' : ''}`}
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 {link.name}
@@ -84,6 +124,7 @@ const Navbar: React.FC = () => {
                             className="resume-btn mobile-resume"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => setIsMobileMenuOpen(false)}
                         >
                             Resume
                         </a>

@@ -57,7 +57,7 @@ const Certifications: React.FC = () => {
 
                 <div className="cert-grid">
                     {certificationsData.map((cert, index) => (
-                        <div className="cert-card glass animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }} key={index}>
+                        <div className="cert-card glass-card animate-fade-up" style={{ animationDelay: `${index * 0.1}s` }} key={index}>
                             <div className="cert-icon text-gradient">
                                 {cert.icon}
                             </div>
