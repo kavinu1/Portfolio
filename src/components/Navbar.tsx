@@ -136,8 +136,8 @@ const Navbar: React.FC = () => {
         aria-label="Navigation menu"
       >
         <ul className="mobile-nav-list">
-          {navLinks.map((link) => (
-            <li key={link.name}>
+          {navLinks.map((link, index) => (
+            <li key={link.name} style={{ "--delay": `${index * 0.1}s` } as React.CSSProperties}>
               <a
                 href={link.href}
                 className={`mobile-nav-link ${activeSection === link.id ? "active" : ""}`}
@@ -148,7 +148,7 @@ const Navbar: React.FC = () => {
               </a>
             </li>
           ))}
-          <li>
+          <li style={{ "--delay": `${navLinks.length * 0.1}s` } as React.CSSProperties}>
             <a
               href={resumeHref}
               className="resume-btn mobile-resume"
