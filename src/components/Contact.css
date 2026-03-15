@@ -80,6 +80,12 @@
   gap: 1.5rem;
 }
 
+@media (max-width: 480px) {
+  .contact-form {
+    gap: 1rem;
+  }
+}
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -118,5 +124,23 @@
 @media (max-width: 768px) {
   .submit-btn {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-method {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .method-details {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .method-details span {
+    font-size: 0.9rem;
+    word-break: break-all;
+    /* Prevent long emails/strings from breaking layout */
   }
 }

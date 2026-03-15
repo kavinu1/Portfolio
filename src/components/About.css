@@ -166,4 +166,14 @@
     font-size: 0.78rem;
     overflow: auto;
   }
+
+  .image-decoration.outline {
+    top: -15px;
+    left: -15px;
+  }
+
+  .image-decoration.fill {
+    bottom: -15px;
+    right: -15px;
+  }
 }

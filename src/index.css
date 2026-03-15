@@ -15,17 +15,13 @@
 
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, #00f2fe 0%, #3b82f6 100%);
-  --gradient-surface: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.03) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  --gradient-surface: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0) 100%);
   --gradient-text: linear-gradient(to right, #ffffff, #a0a0ab);
-  --gradient-accent: linear-gradient(
-    90deg,
-    var(--accent-cyan),
-    var(--accent-purple)
-  );
+  --gradient-accent: linear-gradient(90deg,
+      var(--accent-cyan),
+      var(--accent-purple));
 
   /* Typography */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -61,6 +57,8 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   position: relative;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Noise Texture Overlay */
@@ -204,11 +202,9 @@ section[id] {
 
 .glass-card {
   position: relative;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0) 100%);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-md);
   padding: 2.5rem;
@@ -217,11 +213,9 @@ section[id] {
 
 .glass-card:hover {
   border-color: rgba(0, 242, 254, 0.3);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 100%);
   transform: translateY(-8px);
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.4),
@@ -242,6 +236,7 @@ section[id] {
 }
 
 @keyframes glow-pulse {
+
   0%,
   100% {
     box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
@@ -253,6 +248,7 @@ section[id] {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
@@ -321,6 +317,7 @@ section[id] {
 }
 
 @media (hover: none) and (pointer: coarse) {
+
   .btn-primary:hover,
   .btn-secondary:hover {
     transform: none;
