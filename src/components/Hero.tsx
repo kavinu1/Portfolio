@@ -14,7 +14,9 @@ const Hero: React.FC = () => {
       <div className="container hero-content">
         <div className="hero-badge animate-fade-up">
           <Terminal size={16} />
-          <span>Year 2 CS Undergrad @ University of Westminster</span>
+          <span>
+            Aspiring DevOps Engineer · Year 2 CS Undergrad @ UoW (via IIT)
+          </span>
         </div>
 
         <h1 className="hero-title animate-fade-up animate-delay-1">
@@ -24,9 +26,9 @@ const Hero: React.FC = () => {
         </h1>
 
         <p className="hero-subtitle animate-fade-up animate-delay-2">
-          Computer Science student focused on cloud infrastructure, CI/CD, and
-          containerization. Seeking a DevOps Engineering internship for my Year
-          3 industrial placement.
+          2nd year Computer Science undergraduate passionate about DevOps, cloud
+          infrastructure, and automation. Seeking a DevOps Engineering
+          internship as part of my 3rd year industrial placement.
         </p>
 
         <div className="hero-actions animate-fade-up animate-delay-3">
@@ -40,7 +42,7 @@ const Hero: React.FC = () => {
 
         <div className="hero-tech-stack animate-fade-up animate-delay-4">
           <div className="tech-item">
-            <Server size={18} /> Kubernetes
+            <Server size={18} /> Docker
           </div>
           <div className="tech-item">
             <Terminal size={18} /> Linux

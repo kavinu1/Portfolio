@@ -20,6 +20,7 @@ const skillCategories = [
       "CI/CD Concepts",
       "Containerization",
       "Application Deployment",
+      "GitHub Actions (Basics)",
     ],
   },
   {
@@ -33,14 +34,14 @@ const skillCategories = [
     skills: ["Python", "JavaScript", "TypeScript", "Java"],
   },
   {
-    title: "Web & App Dev",
+    title: "Web & Application Development",
     icon: <Code size={22} />,
-    skills: ["React", "Node.js", "HTML", "CSS", "Flutter"],
+    skills: ["React (Vite)", "Node.js", "Express.js", "HTML", "CSS", "Flutter"],
   },
   {
     title: "Databases & Backend",
     icon: <Database size={22} />,
-    skills: ["Firebase", "REST APIs"],
+    skills: ["Firebase (Auth, Firestore)", "REST APIs"],
   },
   {
     title: "Tools & Platforms",

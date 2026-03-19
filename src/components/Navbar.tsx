@@ -109,8 +109,9 @@ const Navbar: React.FC = () => {
             className="resume-btn"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Open CV (PDF)"
           >
-            Resume
+            CV
           </a>
         </nav>
 
@@ -154,9 +155,10 @@ const Navbar: React.FC = () => {
               className="resume-btn mobile-resume"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Open CV (PDF)"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Resume
+              CV
             </a>
           </li>
         </ul>

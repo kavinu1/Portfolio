@@ -22,10 +22,11 @@ const About: React.FC = () => {
             </p>
             <p>
               With a strong foundation in analytical problem solving and
-              mathematical reasoning, I enjoy bridge the gap between development
-              and operations. My experience ranges from building full-stack
-              applications with React and Node.js to managing containerized
-              environments and collaborative Git workflows.
+              mathematical reasoning, I enjoy bridging the gap between
+              development and operations. My experience ranges from building
+              full-stack applications with React and Node.js to working with
+              Docker, GitHub Actions-based automation, and collaborative
+              branch-based Git workflows.
             </p>
             <p>
               I thrive in team environments and am a fast learner, constantly
