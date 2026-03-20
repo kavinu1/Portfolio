@@ -38,16 +38,17 @@
   align-items: center;
   gap: 1.5rem;
   padding: 1.25rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-1);
+  border: 1px solid var(--border-1);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
 }
 
 .contact-method:hover {
   border-color: var(--accent-cyan);
-  background: rgba(0, 242, 254, 0.05);
+  background: var(--bg-primary);
   transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.05);
 }
 
 .method-icon {
@@ -59,7 +60,7 @@
   background: var(--bg-secondary);
   border-radius: var(--radius-sm);
   color: var(--accent-cyan);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-hairline);
 }
 
 .method-details h4 {
@@ -102,8 +103,8 @@
 .form-group input,
 .form-group textarea {
   padding: 1rem 1.25rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-1);
   border-radius: var(--radius-sm);
   color: var(--text-primary);
   font-family: inherit;
@@ -114,8 +115,8 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent-cyan);
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 0 0 4px rgba(0, 242, 254, 0.1);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px var(--focus-ring);
 }
 
 .submit-btn {

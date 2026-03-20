@@ -1,11 +1,30 @@
 import React, { useState, useEffect } from "react";
-import { Terminal, Menu, X } from "lucide-react";
+import { Terminal, Menu, X, Sun, Moon } from "lucide-react";
 import "./Navbar.css";
+
+type Theme = "dark" | "light";
+
+const THEME_STORAGE_KEY = "theme";
+
+function getInitialTheme(): Theme {
+  if (typeof window === "undefined") return "dark";
+  try {
+    const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
+    if (stored === "light" || stored === "dark") return stored;
+  } catch {
+    // ignore
+  }
+  return window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: light)").matches
+    ? "light"
+    : "dark";
+}
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [theme, setTheme] = useState<Theme>(() => getInitialTheme());
   const resumeHref = `${import.meta.env.BASE_URL}Kavinu_Vanniarachchi_CV.pdf`;
 
   useEffect(() => {
@@ -58,6 +77,15 @@ const Navbar: React.FC = () => {
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    try {
+      window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch {
+      // ignore
+    }
+  }, [theme]);
+
+  useEffect(() => {
     if (!isMobileMenuOpen) return;
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIsMobileMenuOpen(false);
@@ -74,6 +102,13 @@ const Navbar: React.FC = () => {
     { name: "Projects", href: "#projects", id: "projects" },
     { name: "Contact", href: "#contact", id: "contact" },
   ];
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  };
+
+  const themeButtonLabel =
+    theme === "dark" ? "Switch to light theme" : "Switch to dark theme";
 
   return (
     <header className={`navbar ${isScrolled ? "scrolled" : ""}`}>
@@ -104,25 +139,48 @@ const Navbar: React.FC = () => {
               </li>
             ))}
           </ul>
-          <a
-            href={resumeHref}
-            className="resume-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open CV (PDF)"
-          >
-            CV
-          </a>
+          <div className="nav-actions">
+            <button
+              type="button"
+              className="theme-toggle"
+              onClick={toggleTheme}
+              aria-label={themeButtonLabel}
+              title={themeButtonLabel}
+            >
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+            <a
+              href={resumeHref}
+              className="resume-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open CV (PDF)"
+            >
+              CV
+            </a>
+          </div>
         </nav>
 
-        {/* Mobile menu button */}
-        <button
-          className="mobile-menu-btn"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="mobile-actions">
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label={themeButtonLabel}
+            title={themeButtonLabel}
+          >
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+
+          {/* Mobile menu button */}
+          <button
+            className="mobile-menu-btn"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav Menu */}
