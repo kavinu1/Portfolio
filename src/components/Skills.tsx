@@ -70,7 +70,7 @@ const Skills: React.FC = () => {
     <section className="skills section" id="skills">
       <div className="container">
         <h2 className="section-title">
-          Technical <span>Arsenal</span>
+          Technical <span>Skills</span>
         </h2>
 
         <div className="skills-grid">
