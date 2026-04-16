@@ -31,7 +31,7 @@ const projectsData: Project[] = [
       "Vercel",
     ],
     githubPath: "https://github.com/SDGP-03/MediGo",
-    livePath: "https://medigo.vercel.app",
+    livePath: "https://medigolk.vercel.app",
   },
   {
     title: "Pet Clinic Management System (Full-Stack Web App)",
@@ -53,7 +53,7 @@ const projectsData: Project[] = [
       "Railway",
     ],
     githubPath: "https://github.com/kavinu1/pet-clinic",
-    livePath: "https://paw4.netlify.app/",
+    livePath: "https://pawlk.pages.dev",
   },
   {
     title: "InnerSage – Climate Action Awareness Website (UN SDG 13)",
