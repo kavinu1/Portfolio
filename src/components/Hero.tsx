@@ -1,5 +1,5 @@
 import React from "react";
-import { ChevronRight, Terminal, Server, GitBranch, Code, Cpu, Cloud, Globe } from "lucide-react";
+import { ChevronRight, Terminal, Server, GitBranch, Cpu, Cloud, Globe } from "lucide-react";
 import "./Hero.css";
 
 const Hero: React.FC = () => {

@@ -28,7 +28,7 @@ const projectsData: Project[] = [
       "Node.js",
       "Firebase",
       "GitHub Actions",
-      "Vercel",
+      "Vercel"
     ],
     githubPath: "https://github.com/SDGP-03/MediGo",
     livePath: "https://medigolk.vercel.app",
@@ -50,7 +50,7 @@ const projectsData: Project[] = [
       "Docker",
       "GitHub Actions",
       "Cloudflare Pages",
-      "Render",
+      "Render"
     ],
     githubPath: "https://github.com/kavinu1/pet-clinic",
     livePath: "https://pawlk.pages.dev",
@@ -64,7 +64,14 @@ const projectsData: Project[] = [
       "Implemented responsive layout with HTML, CSS, and JavaScript.",
       "Published a lightweight static site focused on clarity and accessibility.",
     ],
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "GitHub Actions",
+      "GitHub Pages",
+      "w3c-validator"
+    ],
     githubPath: "https://github.com/kavinu1/innersage",
     livePath: "https://innersage.xyz",
   },
