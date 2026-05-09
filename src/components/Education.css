@@ -83,10 +83,24 @@
 
 @media (max-width: 768px) {
   .timeline {
-    padding-left: 1.5rem;
+    padding-left: 1.25rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.25rem;
+    margin-bottom: 2rem;
   }
 
   .timeline-dot {
-    left: -1.9rem;
+    left: -1.65rem;
+    top: 1.25rem;
+  }
+
+  .degree-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .edu-meta {
+    gap: 1rem;
   }
 }

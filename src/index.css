@@ -409,6 +409,10 @@ section[id] {
     margin-bottom: 3rem;
   }
 
+  .glass-card {
+    padding: 1.5rem;
+  }
+
   section[id] {
     scroll-margin-top: 80px;
   }
