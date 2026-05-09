@@ -117,7 +117,7 @@ const Contact: React.FC = () => {
                 type="text"
                 id="name"
                 name="name"
-                placeholder="John Doe"
+                placeholder="Enter Your Name"
                 required
               />
             </div>
@@ -128,7 +128,7 @@ const Contact: React.FC = () => {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="john@example.com"
+                placeholder="Enter Your Email"
                 required
               />
             </div>
