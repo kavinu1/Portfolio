@@ -17,22 +17,21 @@ const About: React.FC = () => {
               <span className="text-gradient">
                 Computer Science undergraduate
               </span>{" "}
-              currently in Year 2, dedicated to mastering DevOps, cloud
-              infrastructure, and system reliability.
+              focused on DevOps engineering, cloud infrastructure, automation,
+              and modern full-stack application delivery.
             </p>
             <p>
-              With a strong foundation in analytical problem solving and
-              mathematical reasoning, I enjoy bridging the gap between
-              development and operations. My experience ranges from building
-              full-stack applications with React and Node.js to working with
-              Docker, GitHub Actions-based automation, and collaborative
-              branch-based Git workflows.
+              I build and deploy practical software systems across web and
+              mobile, including React, Node.js, Flutter, Firebase, SQL, and REST
+              APIs. My project work includes containerization with Docker,
+              CI/CD automation with GitHub Actions, and deployments across
+              Vercel, Render, Netlify, and Cloudflare Pages.
             </p>
             <p>
-              I thrive in team environments and am a fast learner, constantly
-              adapting to new technologies like Kubernetes and advanced cloud
-              deployment practices. I am currently seeking a DevOps Engineering
-              internship for my Year 3 industrial placement.
+              I enjoy Linux-based workflows, Git collaboration, code reviews,
+              and solving reliability problems with a clear, analytical mindset.
+              My goal is to apply DevOps practices to build efficient,
+              production-ready systems with strong developer experience.
             </p>
 
             <div className="about-stats-grid">
@@ -40,7 +39,7 @@ const About: React.FC = () => {
                 <MapPin className="stat-icon" />
                 <div className="stat-info">
                   <h4>Location</h4>
-                  <p>Pannipitiya, Sri Lanka</p>
+                  <p>Padukka, Sri Lanka</p>
                 </div>
               </div>
               <div className="stat-card">

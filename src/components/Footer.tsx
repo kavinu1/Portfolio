@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             <p className="footer-desc">
               DevOps enthusiast and Computer Science undergraduate (University
               of Westminster via IIT Sri Lanka). Focused on automation,
-              containerization, and scalable deployments.
+              containerization, cloud deployments, and full-stack delivery.
             </p>
           </div>
 

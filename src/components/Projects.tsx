@@ -13,9 +13,9 @@ type Project = {
 
 const projectsData: Project[] = [
   {
-    title: "MediGo – Ambulance Fleet Management System",
+    title: "MediGo - Ambulance Fleet Management System",
     description:
-      "Smart ambulance fleet management system with a Flutter driver app and a React/TypeScript admin dashboard.",
+      "Smart ambulance fleet management system built to improve emergency dispatch efficiency.",
     highlights: [
       "Designed and implemented CI/CD automation with GitHub Actions.",
       "Built mobile driver app and web dashboard for coordination workflows.",
@@ -46,17 +46,17 @@ const projectsData: Project[] = [
       "React (Vite)",
       "Node.js",
       "Express.js",
-      "Firebase Auth",
-      "Firestore",
+      "Firebase",
+      "Docker",
       "GitHub Actions",
-      "Netlify",
-      "Railway",
+      "Cloudflare Pages",
+      "Render",
     ],
     githubPath: "https://github.com/kavinu1/pet-clinic",
     livePath: "https://pawlk.pages.dev",
   },
   {
-    title: "InnerSage – Climate Action Awareness Website (UN SDG 13)",
+    title: "InnerSage - Climate Action Awareness Website (UN SDG 13)",
     description:
       "Climate Action awareness website aligned with UN SDG 13, built with a clean responsive UI and educational content.",
     highlights: [

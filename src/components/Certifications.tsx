@@ -4,6 +4,12 @@ import "./Certifications.css";
 
 const certificationsData = [
   {
+    title: "DevOps 101 Bootcamp",
+    provider: "CoDeKu DevOps Academy",
+    date: "May 2026",
+    icon: <Award size={20} />,
+  },
+  {
     title: "Microsoft Azure AI Fundamentals",
     provider: "Microsoft",
     date: "March 2025",

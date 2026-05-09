@@ -34,9 +34,10 @@ const Contact: React.FC = () => {
           <div className="contact-info glass-card animate-fade-up">
             <h3>Let's build something scalable.</h3>
             <p>
-              I'm open to DevOps internship opportunities, collaboration, and
-              learning-focused projects. Send me a message and I'll get back to
-              you as soon as I can.
+              I'm open to DevOps engineering opportunities, full-stack
+              collaboration, cloud deployment work, and learning-focused
+              projects. Send me a message and I'll get back to you as soon as I
+              can.
             </p>
 
             <div className="contact-methods">
@@ -99,7 +100,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="method-details">
                   <h4>Available For</h4>
-                  <span>DevOps Internship (Year 3 Placement)</span>
+                  <span>DevOps, Cloud, and Full-Stack Projects</span>
                 </div>
               </div>
             </div>

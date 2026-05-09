@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         <div className="hero-badge animate-fade-up">
           <Terminal size={16} />
           <span>
-            Aspiring DevOps Engineer · Year 2 CS Undergrad @ UoW (via IIT)
+            Aspiring DevOps Engineer | BSc CS Undergrad @ UoW (via IIT)
           </span>
         </div>
 
@@ -26,9 +26,9 @@ const Hero: React.FC = () => {
         </h1>
 
         <p className="hero-subtitle animate-fade-up animate-delay-2">
-          2nd year Computer Science undergraduate passionate about DevOps, cloud
-          infrastructure, and automation. Seeking a DevOps Engineering
-          internship as part of my 3rd year industrial placement.
+          Computer Science undergraduate passionate about cloud infrastructure,
+          automation, full-stack development, and deployment workflows with
+          Docker, GitHub Actions, Vercel, Render, and Cloudflare Pages.
         </p>
 
         <div className="hero-actions animate-fade-up animate-delay-3">
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
             <GitBranch size={18} /> Git & GitHub
           </div>
           <div className="tech-item">
-            <Code size={18} /> Node.js
+            <Code size={18} /> React & Node.js
           </div>
         </div>
       </div>

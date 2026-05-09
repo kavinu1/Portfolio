@@ -5,13 +5,13 @@ import "./Education.css";
 const educationData = [
   {
     degree: "BSc (Hons) Computer Science",
-    institution: "University of Westminster – via IIT Sri Lanka",
-    duration: "Currently: Year 2 Undergraduate",
-    expectation: "Expected Graduation: 2028",
+    institution: "University of Westminster - via IIT Sri Lanka",
+    duration: "Jan 2025 - Sep 2028",
+    expectation: "Currently pursuing undergraduate studies",
     location: "Colombo, Sri Lanka",
   },
   {
-    degree: "International Advanced Level (IAL) – Mathematics Stream",
+    degree: "International Advanced Level (IAL) - Mathematics Stream",
     institution: "Pearson Edexcel",
     duration: "Completed: 2025",
     location: "Sri Lanka",

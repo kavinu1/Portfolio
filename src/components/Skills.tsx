@@ -18,9 +18,9 @@ const skillCategories = [
     skills: [
       "Docker",
       "CI/CD Concepts",
+      "GitHub Actions",
       "Containerization",
       "Application Deployment",
-      "GitHub Actions (Basics)",
     ],
   },
   {
@@ -41,20 +41,26 @@ const skillCategories = [
   {
     title: "Databases & Backend",
     icon: <Database size={22} />,
-    skills: ["Firebase (Auth, Firestore)", "REST APIs"],
+    skills: ["SQL", "Firebase", "REST APIs"],
   },
   {
     title: "Tools & Platforms",
     icon: <Terminal size={22} />,
-    skills: ["Linux (Basic Admin)", "Command Line Interface (CLI)"],
+    skills: [
+      "Linux (Basic Administration)",
+      "CLI",
+      "Vercel",
+      "Render",
+      "Cloudflare Pages",
+    ],
   },
 ];
 
 const learningSkills = [
-  "Kubernetes container orchestration",
-  "Cloud infrastructure and deployment practices",
-  "Linux system administration",
-  "DevOps automation workflows",
+  "Building CI/CD pipelines with GitHub Actions",
+  "Containerizing applications with Docker",
+  "Deploying production-ready apps on cloud platforms",
+  "Working with Linux CLI for system operations",
 ];
 
 const coreCompetencies = [
