@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [theme, setTheme] = useState<Theme>(() => getInitialTheme());
-  const resumeHref = `${import.meta.env.BASE_URL}Kavinu_Vanniarachchi_CV.pdf`;
+  const resumeHref = `${import.meta.env.BASE_URL}Kavinu Vanniarachchi CV.pdf`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -196,7 +196,10 @@ const Navbar: React.FC = () => {
       >
         <ul className="mobile-nav-list">
           {navLinks.map((link, index) => (
-            <li key={link.name} style={{ "--delay": `${index * 0.1}s` } as React.CSSProperties}>
+            <li
+              key={link.name}
+              style={{ "--delay": `${index * 0.1}s` } as React.CSSProperties}
+            >
               <a
                 href={link.href}
                 className={`mobile-nav-link ${activeSection === link.id ? "active" : ""}`}
@@ -207,7 +210,11 @@ const Navbar: React.FC = () => {
               </a>
             </li>
           ))}
-          <li style={{ "--delay": `${navLinks.length * 0.1}s` } as React.CSSProperties}>
+          <li
+            style={
+              { "--delay": `${navLinks.length * 0.1}s` } as React.CSSProperties
+            }
+          >
             <a
               href={resumeHref}
               className="resume-btn mobile-resume"

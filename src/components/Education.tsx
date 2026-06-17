@@ -13,13 +13,15 @@ const educationData = [
   {
     degree: "International Advanced Level (IAL) - Mathematics Stream",
     institution: "Pearson Edexcel",
-    duration: "Completed: 2025",
+    duration: "Jan 2024 - Jan 2025",
+    expectation: "Results: B - Mathematics | C - Physics | C - Chemistry",
     location: "Sri Lanka",
   },
   {
     degree: "GCE Ordinary Level (O/L)",
     institution: "Dharmapala Vidyalaya Pannipitiya",
-    duration: "Completed: 2023 (2024)",
+    duration: "2022 (2023)",
+    expectation: "Results: 9A",
     location: "Pannipitiya, Sri Lanka",
   },
 ];

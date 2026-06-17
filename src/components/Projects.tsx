@@ -15,11 +15,12 @@ const projectsData: Project[] = [
   {
     title: "MediGo - Ambulance Fleet Management System",
     description:
-      "Smart ambulance fleet management system built to improve emergency dispatch efficiency.",
+      "Built a smart ambulance fleet management system to improve emergency dispatch efficiency.",
     highlights: [
-      "Designed and implemented CI/CD automation with GitHub Actions.",
-      "Built mobile driver app and web dashboard for coordination workflows.",
-      "Collaborated in a team with Git-based workflows and version control.",
+      "Developed a cross-platform driver app (Flutter) and admin dashboard (React + TypeScript).",
+      "Built CI/CD pipelines with GitHub Actions for automated build, test, and deployment.",
+      "Integrated Firebase for real-time data, authentication, and backend services.",
+      "Collaborated using Git workflows (PRs, code reviews) in a team environment.",
     ],
     tags: [
       "Flutter",
@@ -28,19 +29,20 @@ const projectsData: Project[] = [
       "Node.js",
       "Firebase",
       "GitHub Actions",
-      "Vercel"
+      "Vercel",
     ],
     githubPath: "https://github.com/SDGP-03/MediGo",
-    livePath: "https://medigolk.vercel.app",
+    livePath: "https://medigolk.vercel.app/",
   },
   {
     title: "Pet Clinic Management System (Full-Stack Web App)",
     description:
-      "Full-stack pet clinic management web app with secure authentication, role-based access, and scalable deployments.",
+      "Engineered a scalable full-stack pet clinic system featuring secure access control and automated containerized deployment.",
     highlights: [
-      "Implemented REST API with Express.js and a React (Vite) frontend.",
-      "Added email/password auth with Firebase and role-based UI visibility.",
-      "Deployed backend on Railway and frontend on Netlify for cloud hosting.",
+      "Engineered a scalable full-stack pet clinic system using React and Express.js.",
+      "Secured user access with Firebase Authentication and role-based authorization.",
+      "Designed and deployed containerized applications using Docker and Docker Compose.",
+      "Automated build and deployment workflows with GitHub Actions (CI/CD).",
     ],
     tags: [
       "React (Vite)",
@@ -50,30 +52,39 @@ const projectsData: Project[] = [
       "Docker",
       "GitHub Actions",
       "Cloudflare Pages",
-      "Render"
+      "Render",
     ],
     githubPath: "https://github.com/kavinu1/pet-clinic",
-    livePath: "https://pawlk.pages.dev",
+    livePath: "https://pawlk.pages.dev/",
   },
   {
     title: "InnerSage - Climate Action Awareness Website (UN SDG 13)",
     description:
-      "Climate Action awareness website aligned with UN SDG 13, built with a clean responsive UI and educational content.",
+      "Built a responsive climate awareness platform supporting UN SDG 13 (Climate Action) with educational content.",
     highlights: [
-      "Created educational content on climate change causes, impacts, and solutions.",
-      "Implemented responsive layout with HTML, CSS, and JavaScript.",
-      "Published a lightweight static site focused on clarity and accessibility.",
+      "Built a responsive climate awareness platform supporting UN SDG 13 (Climate Action).",
+      "Delivered educational content on climate change and sustainability practices.",
+      "Ensured cross-device compatibility using modern HTML, CSS, and JavaScript.",
+      "Automated validation and deployment using GitHub Actions workflows (W3C validation, Jekyll Pages, static checks).",
     ],
-    tags: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "GitHub Actions",
-      "GitHub Pages",
-      "w3c-validator"
-    ],
+    tags: ["HTML", "CSS", "JavaScript", "GitHub Actions"],
     githubPath: "https://github.com/kavinu1/innersage",
     livePath: "https://innersage.xyz",
+  },
+  {
+    title: "Portfolio Website (Vite React TS)",
+    description:
+      "Developed a modern personal portfolio using React (Vite) and TypeScript to showcase projects and skills.",
+    highlights: [
+      "Developed a modern personal portfolio using React (Vite) and TypeScript.",
+      "Designed responsive and user-friendly UI to showcase projects and skills.",
+      "Implemented reusable components and optimized performance for fast loading.",
+      "Integrated smooth navigation and clean layout for better user experience.",
+      "Deployed production-ready application on Cloudflare Pages with GitHub integration.",
+    ],
+    tags: ["React (Vite)", "TypeScript", "HTML", "CSS", "GitHub", "Cloudflare Pages"],
+    githubPath: "https://github.com/kavinu1/Portfolio.git",
+    livePath: "https://kavinu.pages.dev/",
   },
 ];
 

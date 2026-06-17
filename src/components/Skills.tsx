@@ -34,9 +34,9 @@ const skillCategories = [
     skills: ["Python", "JavaScript", "TypeScript", "Java"],
   },
   {
-    title: "Web & Application Development",
+    title: "Mobile & Web Development",
     icon: <Code size={22} />,
-    skills: ["React (Vite)", "Node.js", "Express.js", "HTML", "CSS", "Flutter"],
+    skills: ["Flutter", "React", "Node.js", "HTML", "CSS"],
   },
   {
     title: "Databases & Backend",
@@ -57,10 +57,10 @@ const skillCategories = [
 ];
 
 const learningSkills = [
-  "Building CI/CD pipelines with GitHub Actions",
-  "Containerizing applications with Docker",
-  "Deploying production-ready apps on cloud platforms",
-  "Working with Linux CLI for system operations",
+  "Built CI/CD pipelines using GitHub Actions for automated workflows.",
+  "Containerized applications using Docker for consistent deployment.",
+  "Deployed applications on Vercel, Netlify, Cloudflare Pages, and Render.",
+  "Worked with Linux CLI for basic system operations.",
 ];
 
 const coreCompetencies = [

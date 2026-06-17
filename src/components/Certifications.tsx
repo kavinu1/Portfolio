@@ -10,27 +10,21 @@ const certificationsData = [
     icon: <Award size={20} />,
   },
   {
-    title: "Microsoft Azure AI Fundamentals",
-    provider: "Microsoft",
-    date: "March 2025",
-    icon: <Award size={20} />,
-  },
-  {
-    title: "Kubernetes",
-    provider: "CoDeKu DevOps Academy",
-    date: "September 2025",
-    icon: <Award size={20} />,
-  },
-  {
-    title: "Version Controlling",
-    provider: "CoDeKu DevOps Academy",
-    date: "December 2025",
-    icon: <Award size={20} />,
-  },
-  {
     title: "Docker Beginners Guide",
     provider: "CoDeKu DevOps Academy",
     date: "September 2025",
+    icon: <Award size={20} />,
+  },
+  {
+    title: "AWS Cloud Practitioner Essentials",
+    provider: "Amazon Web Services",
+    date: "June 2026",
+    icon: <Award size={20} />,
+  },
+  {
+    title: "Microsoft Azure AI Fundamentals",
+    provider: "Microsoft",
+    date: "March 2025",
     icon: <Award size={20} />,
   },
   {
