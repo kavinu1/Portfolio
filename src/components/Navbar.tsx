@@ -1,5 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { Terminal, Menu, X, Sun, Moon } from "lucide-react";
+import {
+  Terminal,
+  Menu,
+  X,
+  Sun,
+  Moon,
+  User,
+  GraduationCap,
+  Cpu,
+  Award,
+  Briefcase,
+  Mail,
+  Github,
+  Linkedin,
+  ChevronRight,
+} from "lucide-react";
 import "./Navbar.css";
 
 type Theme = "dark" | "light";
@@ -95,12 +110,27 @@ const Navbar: React.FC = () => {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
-    { name: "About", href: "#about", id: "about" },
-    { name: "Education", href: "#education", id: "education" },
-    { name: "Skills", href: "#skills", id: "skills" },
-    { name: "Certifications", href: "#certifications", id: "certifications" },
-    { name: "Projects", href: "#projects", id: "projects" },
-    { name: "Contact", href: "#contact", id: "contact" },
+    { name: "About", href: "#about", id: "about", icon: <User size={20} /> },
+    {
+      name: "Education",
+      href: "#education",
+      id: "education",
+      icon: <GraduationCap size={20} />,
+    },
+    { name: "Skills", href: "#skills", id: "skills", icon: <Cpu size={20} /> },
+    {
+      name: "Certifications",
+      href: "#certifications",
+      id: "certifications",
+      icon: <Award size={20} />,
+    },
+    {
+      name: "Projects",
+      href: "#projects",
+      id: "projects",
+      icon: <Briefcase size={20} />,
+    },
+    { name: "Contact", href: "#contact", id: "contact", icon: <Mail size={20} /> },
   ];
 
   const toggleTheme = () => {
@@ -194,11 +224,16 @@ const Navbar: React.FC = () => {
         aria-modal="true"
         aria-label="Navigation menu"
       >
+        <div className="mobile-nav-header">
+          <Terminal size={22} className="mobile-header-icon" />
+          <span className="mobile-header-title">Navigation Hub</span>
+        </div>
+
         <ul className="mobile-nav-list">
           {navLinks.map((link, index) => (
             <li
               key={link.name}
-              style={{ "--delay": `${index * 0.1}s` } as React.CSSProperties}
+              style={{ "--delay": `${index * 0.06}s` } as React.CSSProperties}
             >
               <a
                 href={link.href}
@@ -206,27 +241,54 @@ const Navbar: React.FC = () => {
                 aria-current={activeSection === link.id ? "page" : undefined}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {link.name}
+                <span className="mobile-link-icon">{link.icon}</span>
+                <span className="mobile-link-text">{link.name}</span>
+                <ChevronRight size={18} className="mobile-link-arrow" />
               </a>
             </li>
           ))}
           <li
             style={
-              { "--delay": `${navLinks.length * 0.1}s` } as React.CSSProperties
+              { "--delay": `${navLinks.length * 0.06}s` } as React.CSSProperties
             }
           >
             <a
               href={resumeHref}
-              className="resume-btn mobile-resume"
+              className="mobile-resume-link"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open CV (PDF)"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              CV
+              <span className="mobile-link-text">Download CV</span>
             </a>
           </li>
         </ul>
+
+        <div className="mobile-nav-footer">
+          <span className="mobile-footer-text">Get in touch</span>
+          <div className="mobile-social-links">
+            <a
+              href="https://github.com/kavinu1"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <Github size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kavinuv"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={20} />
+            </a>
+            <a href="mailto:kavinuthepul456@gmail.com" aria-label="Email">
+              <Mail size={20} />
+            </a>
+          </div>
+        </div>
       </div>
     </header>
   );

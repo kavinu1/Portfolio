@@ -8,7 +8,7 @@ type Project = {
   highlights: string[];
   tags: string[];
   githubPath: string;
-  livePath: string;
+  livePath?: string;
 };
 
 const projectsData: Project[] = [
@@ -86,6 +86,26 @@ const projectsData: Project[] = [
     githubPath: "https://github.com/kavinu1/Portfolio.git",
     livePath: "https://kavinu.pages.dev/",
   },
+  {
+    title: "Smart Campus API (JAX-RS Web Service)",
+    description:
+      "Designed and built a fully RESTful web service to manage campus rooms and IoT sensors with historical logs.",
+    highlights: [
+      "Built a versioned REST API (/api/v1) using JAX-RS (Jersey) and deployed on Apache Tomcat.",
+      "Implemented thread-safe, in-memory data structures using synchronized static stores to manage rooms, sensors, and readings.",
+      "Developed custom logging filters and mappers for precise exception handling (409, 422, 403, and 500 status codes).",
+      "Designed clean sub-resource routing to handle nested resources like sensor readings under specific sensors.",
+    ],
+    tags: [
+      "Java",
+      "JAX-RS (Jersey)",
+      "Apache Tomcat",
+      "REST API",
+      "Maven",
+      "Thread-Safety",
+    ],
+    githubPath: "https://github.com/kavinu1/CSA_CW_w2151928",
+  },
 ];
 
 const Projects: React.FC = () => {
@@ -133,16 +153,18 @@ const Projects: React.FC = () => {
                   <Github size={20} />
                   <span>Code</span>
                 </a>
-                <a
-                  href={project.livePath}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link"
-                  aria-label={`Open ${project.title} live demo`}
-                >
-                  <ExternalLink size={20} />
-                  <span>Demo</span>
-                </a>
+                {project.livePath && (
+                  <a
+                    href={project.livePath}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                    aria-label={`Open ${project.title} live demo`}
+                  >
+                    <ExternalLink size={20} />
+                    <span>Demo</span>
+                  </a>
+                )}
               </div>
             </article>
           ))}
