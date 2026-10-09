@@ -66,7 +66,7 @@ src/
 ## 👨‍💻 Author
 
 **Kavinu Vanniarachchi**
-*BSc CS Undergrad @ University of Westminster
+*BSc CS Undergrad @ University of Westminster*
 
 - **Focus**: Cloud Infrastructure, Automation, Full-stack Development
 - **Tools**: Docker, Linux, GitHub Actions, Git
