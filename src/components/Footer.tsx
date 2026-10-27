@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
               Kavinu<span className="text-gradient">V</span>
             </h3>
             <p className="footer-desc">
-              DevOps enthusiast and Computer Science undergraduate (University
-              of Westminster via IIT Sri Lanka). Focused on automation,
-              containerization, cloud deployments, and full-stack delivery.
+              Computer Science undergraduate and DevOps &amp; Cloud Platforms
+              Intern at N-able, focused on cloud infrastructure, automation,
+              and reliable software delivery.
             </p>
           </div>
 
@@ -27,6 +27,9 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <a href="#education">Education</a>
+                </li>
+                <li>
+                  <a href="#experience">Experience</a>
                 </li>
                 <li>
                   <a href="#skills">Skills</a>
