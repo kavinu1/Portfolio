@@ -4,10 +4,6 @@ import "./Certifications.css";
 
 const certificationsData = [
   {
-    title: "AI Skills Fest 2026",
-    icon: <Award size={20} />,
-  },
-  {
     title: "DevOps 101 Bootcamp",
     provider: "CoDeKu DevOps Academy",
     date: "May 2026",
