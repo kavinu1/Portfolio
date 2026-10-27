@@ -52,6 +52,20 @@ npm run build
 
 The output will be in the `dist` directory.
 
+### Run with Docker
+
+Docker Compose builds the optimized site, serves it with Nginx, and maps it to port `8080` on your machine:
+
+```bash
+docker compose up --build -d
+```
+
+Open [http://localhost:8080](http://localhost:8080). View its status and logs with `docker compose ps` and `docker compose logs -f`. Stop and remove the container with:
+
+```bash
+docker compose down
+```
+
 ## 📄 Project Structure
 
 ```text
