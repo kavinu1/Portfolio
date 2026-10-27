@@ -20,15 +20,16 @@ const Hero: React.FC = () => {
           </div>
 
           <h1 className="hero-title animate-fade-up animate-delay-1">
-            Engineering the <span className="text-gradient">Future</span> <br />
-            of Cloud & <br />
-            <span className="text-gradient">DevOps.</span>
+            Building <span className="text-gradient">Reliable</span> <br />
+            Cloud & <br />
+            <span className="text-gradient">DevOps Systems.</span>
           </h1>
 
           <p className="hero-subtitle animate-fade-up animate-delay-2">
-            Hi, I'm Kavinu. A Computer Science Undergraduate specializing in 
-            scalable architectures, automated CI/CD pipelines, and high-performance 
-            full-stack development. I turn complex problems into elegant systems.
+            Hi, I'm Kavinu, a Computer Science undergraduate and DevOps & Cloud
+            Platforms Intern at N-able. I work with cloud infrastructure,
+            automation, containers, and software engineering to build scalable
+            applications and improve development workflows.
           </p>
 
           <div className="hero-actions animate-fade-up animate-delay-3">

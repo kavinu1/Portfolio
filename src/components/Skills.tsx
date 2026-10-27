@@ -17,6 +17,9 @@ const skillCategories = [
     icon: <Settings size={22} />,
     skills: [
       "Docker",
+      "AWS Lambda",
+      "Amazon EC2",
+      "Cloud Computing",
       "CI/CD Concepts",
       "GitHub Actions",
       "Containerization",
@@ -24,9 +27,15 @@ const skillCategories = [
     ],
   },
   {
-    title: "Version Control",
-    icon: <GitBranch size={22} />,
-    skills: ["Git", "GitHub", "Branch-based Development Workflows"],
+    title: "Tools & Platforms",
+    icon: <Terminal size={22} />,
+    skills: [
+      "Linux (Basic Administration)",
+      "CLI",
+      "Vercel",
+      "Render",
+      "Cloudflare Pages",
+    ],
   },
   {
     title: "Programming & Scripting",
@@ -39,20 +48,14 @@ const skillCategories = [
     skills: ["Flutter", "React", "Node.js", "HTML", "CSS"],
   },
   {
+    title: "Version Control",
+    icon: <GitBranch size={22} />,
+    skills: ["Git", "GitHub", "Branch-based Development Workflows"],
+  },
+  {
     title: "Databases & Backend",
     icon: <Database size={22} />,
     skills: ["SQL", "Firebase", "REST APIs"],
-  },
-  {
-    title: "Tools & Platforms",
-    icon: <Terminal size={22} />,
-    skills: [
-      "Linux (Basic Administration)",
-      "CLI",
-      "Vercel",
-      "Render",
-      "Cloudflare Pages",
-    ],
   },
 ];
 

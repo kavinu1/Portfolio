@@ -41,29 +41,7 @@ const Contact: React.FC = () => {
             </p>
 
             <div className="contact-methods">
-              <a
-                href="mailto:kavinuthepul456@gmail.com"
-                className="contact-method"
-              >
-                <div className="method-icon">
-                  <Mail size={24} />
-                </div>
-                <div className="method-details">
-                  <h4>Email Me</h4>
-                  <span>kavinuthepul456@gmail.com</span>
-                </div>
-              </a>
-
-              <a href="tel:+94712190188" className="contact-method">
-                <div className="method-icon">
-                  <Phone size={24} />
-                </div>
-                <div className="method-details">
-                  <h4>Call / WhatsApp</h4>
-                  <span>+94 71 219 0188</span>
-                </div>
-              </a>
-
+              
               <a
                 href="https://www.linkedin.com/in/kavinuv"
                 target="_blank"
@@ -112,7 +90,7 @@ const Contact: React.FC = () => {
             onSubmit={handleSubmit}
           >
             <div className="form-group">
-              <label htmlFor="name">System Admin Name</label>
+              <label htmlFor="name">Name</label>
               <input
                 type="text"
                 id="name"
@@ -123,7 +101,7 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">Return Address</label>
+              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 id="email"
@@ -134,12 +112,12 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Payload</label>
+              <label htmlFor="message">Message</label>
               <textarea
                 id="message"
                 name="message"
                 rows={5}
-                placeholder="Execute connection request..."
+                placeholder="Enter Your Message"
                 required
               ></textarea>
             </div>

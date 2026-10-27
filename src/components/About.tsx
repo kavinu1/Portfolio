@@ -17,13 +17,15 @@ const About: React.FC = () => {
               <span className="text-gradient">
                 Computer Science undergraduate
               </span>{" "}
-              focused on DevOps engineering, cloud infrastructure, automation,
-              and modern full-stack application delivery.
+              and a{" "}
+              <span className="text-gradient">DevOps &amp; Cloud Platforms Intern at N-able</span>{" "}
+              focused on cloud infrastructure, automation, and software engineering.
             </p>
             <p>
               I build and deploy practical software systems across web and
               mobile, including React, Node.js, Flutter, Firebase, SQL, and REST
-              APIs. My project work includes containerization with Docker,
+              APIs. My experience includes AWS services such as Lambda and EC2,
+              containerization with Docker,
               CI/CD automation with GitHub Actions, and deployments across
               Vercel, Render, Netlify, and Cloudflare Pages.
             </p>
@@ -39,7 +41,7 @@ const About: React.FC = () => {
                 <MapPin className="stat-icon" />
                 <div className="stat-info">
                   <h4>Location</h4>
-                  <p>Padukka, Sri Lanka</p>
+                  <p>Colombo, Sri Lanka</p>
                 </div>
               </div>
               <div className="stat-card">

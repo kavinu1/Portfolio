@@ -9,18 +9,8 @@
     <meta name="color-scheme" content="dark light" />
     <script>
       (function () {
-        try {
-          var storageKey = "theme";
-          var stored = localStorage.getItem(storageKey);
-          var theme =
-            stored === "light" || stored === "dark"
-              ? stored
-              : window.matchMedia &&
-                  window.matchMedia("(prefers-color-scheme: light)").matches
-                ? "light"
-                : "dark";
-          document.documentElement.dataset.theme = theme;
-        } catch (e) {}
+        var themeQuery = window.matchMedia("(prefers-color-scheme: light)");
+        document.documentElement.dataset.theme = themeQuery.matches ? "light" : "dark";
       })();
     </script>
     <!-- Google Fonts -->

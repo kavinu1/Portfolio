@@ -3,43 +3,22 @@ import {
   Terminal,
   Menu,
   X,
-  Sun,
-  Moon,
   User,
   GraduationCap,
   Cpu,
   Award,
   Briefcase,
-  Mail,
+  MessageSquare,
   Github,
   Linkedin,
   ChevronRight,
 } from "lucide-react";
 import "./Navbar.css";
 
-type Theme = "dark" | "light";
-
-const THEME_STORAGE_KEY = "theme";
-
-function getInitialTheme(): Theme {
-  if (typeof window === "undefined") return "dark";
-  try {
-    const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
-    if (stored === "light" || stored === "dark") return stored;
-  } catch {
-    // ignore
-  }
-  return window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: light)").matches
-    ? "light"
-    : "dark";
-}
-
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [theme, setTheme] = useState<Theme>(() => getInitialTheme());
   const resumeHref = `${import.meta.env.BASE_URL}Kavinu Vanniarachchi CV.pdf`;
 
   useEffect(() => {
@@ -52,6 +31,7 @@ const Navbar: React.FC = () => {
       "home",
       "about",
       "education",
+      "experience",
       "skills",
       "certifications",
       "projects",
@@ -92,13 +72,15 @@ const Navbar: React.FC = () => {
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-    try {
-      window.localStorage.setItem(THEME_STORAGE_KEY, theme);
-    } catch {
-      // ignore
-    }
-  }, [theme]);
+    const themeQuery = window.matchMedia("(prefers-color-scheme: light)");
+    const applyTheme = () => {
+      document.documentElement.dataset.theme = themeQuery.matches ? "light" : "dark";
+    };
+
+    applyTheme();
+    themeQuery.addEventListener("change", applyTheme);
+    return () => themeQuery.removeEventListener("change", applyTheme);
+  }, []);
 
   useEffect(() => {
     if (!isMobileMenuOpen) return;
@@ -117,6 +99,12 @@ const Navbar: React.FC = () => {
       id: "education",
       icon: <GraduationCap size={20} />,
     },
+    {
+      name: "Experience",
+      href: "#experience",
+      id: "experience",
+      icon: <Briefcase size={20} />,
+    },
     { name: "Skills", href: "#skills", id: "skills", icon: <Cpu size={20} /> },
     {
       name: "Certifications",
@@ -130,15 +118,8 @@ const Navbar: React.FC = () => {
       id: "projects",
       icon: <Briefcase size={20} />,
     },
-    { name: "Contact", href: "#contact", id: "contact", icon: <Mail size={20} /> },
+    { name: "Contact", href: "#contact", id: "contact", icon: <MessageSquare size={20} /> },
   ];
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-  };
-
-  const themeButtonLabel =
-    theme === "dark" ? "Switch to light theme" : "Switch to dark theme";
 
   return (
     <header className={`navbar ${isScrolled ? "scrolled" : ""}`}>
@@ -170,15 +151,6 @@ const Navbar: React.FC = () => {
             ))}
           </ul>
           <div className="nav-actions">
-            <button
-              type="button"
-              className="theme-toggle"
-              onClick={toggleTheme}
-              aria-label={themeButtonLabel}
-              title={themeButtonLabel}
-            >
-              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
             <a
               href={resumeHref}
               className="resume-btn"
@@ -192,16 +164,6 @@ const Navbar: React.FC = () => {
         </nav>
 
         <div className="mobile-actions">
-          <button
-            type="button"
-            className="theme-toggle"
-            onClick={toggleTheme}
-            aria-label={themeButtonLabel}
-            title={themeButtonLabel}
-          >
-            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
-
           {/* Mobile menu button */}
           <button
             className="mobile-menu-btn"
@@ -283,9 +245,6 @@ const Navbar: React.FC = () => {
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
-            </a>
-            <a href="mailto:kavinuthepul456@gmail.com" aria-label="Email">
-              <Mail size={20} />
             </a>
           </div>
         </div>

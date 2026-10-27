@@ -4,6 +4,10 @@ import "./Certifications.css";
 
 const certificationsData = [
   {
+    title: "AI Skills Fest 2026",
+    icon: <Award size={20} />,
+  },
+  {
     title: "DevOps 101 Bootcamp",
     provider: "CoDeKu DevOps Academy",
     date: "May 2026",
@@ -40,6 +44,10 @@ const certificationsData = [
     icon: <Award size={20} />,
   },
   {
+    title: "Python for Non-Programmers",
+    icon: <Award size={20} />,
+  },
+  {
     title: "Data Science Math Skills",
     provider: "Duke University",
     date: "November 2023",
@@ -65,8 +73,8 @@ const Certifications: React.FC = () => {
               <div className="cert-icon text-gradient">{cert.icon}</div>
               <div className="cert-info">
                 <h3>{cert.title}</h3>
-                <p className="provider">{cert.provider}</p>
-                <p className="date">{cert.date}</p>
+                {cert.provider && <p className="provider">{cert.provider}</p>}
+                {cert.date && <p className="date">{cert.date}</p>}
               </div>
             </div>
           ))}

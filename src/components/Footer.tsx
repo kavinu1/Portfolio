@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import "./Footer.css";
 
 const Footer: React.FC = () => {
@@ -66,9 +66,6 @@ const Footer: React.FC = () => {
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
-            </a>
-            <a href="mailto:kavinuthepul456@gmail.com" aria-label="Email">
-              <Mail size={20} />
             </a>
           </div>
         </div>
